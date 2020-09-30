@@ -16,6 +16,29 @@ void frqcnt(int arr[],int n)
 }
 }
 
+void findSymPairs(int arr[][2], int row) 
+{ 
+    // Creates an empty hashMap hM 
+    unordered_map<int, int> hM; 
+  
+    // Traverse through the given array 
+    for (int i = 0; i < row; i++) 
+    { 
+        // First and second elements of current pair 
+        int first = arr[i][0]; 
+        int sec   = arr[i][1]; 
+  
+        // If found and value in hash matches with first 
+        // element of this pair, we found symmetry 
+        if (hM.find(sec) != hM.end() && hM[sec] == first) 
+            cout << "(" << sec << ", " << first << ")" <<endl; 
+  
+        else  // Else put sec element of this pair in hash 
+            hM[first] = sec; 
+    } 
+} 
+  
+
 int main()
 {
     int n;
