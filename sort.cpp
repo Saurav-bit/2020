@@ -69,14 +69,14 @@ int main()
 
       cin.sync();
         }
-    cout<<"b4 sort";
+    cout<<"before sort";
     for(int i=0;i<n;i++)
         cout<<arr[i];
-    //sort(arr,arr+n);
-    sort(arr,arr+n,greater<int>());
+
+    sort(arr,arr+n);
     cout<<"after sort";
     for(int i=0;i<n;i++)
         cout<<arr[i];
 
-    return 1;
+    return 0;
 }
