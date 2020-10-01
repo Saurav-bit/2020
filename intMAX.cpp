@@ -6,10 +6,10 @@ using namespace std;
 
 #define pb push_back
 
-const int M = 3;
+const int mxx = 3;
 
 double maxavg(int cost[][M]){
-	int N = M;
+	int N = mxx;
 	
 	 int dp[N+1][N+1]; 
     dp[0][0] = cost[0][0]; 
