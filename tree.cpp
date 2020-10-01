@@ -1,16 +1,16 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 struct node
 {	
-	int data;
+	int value;
 	node *left;
 	node * right;
 };
 
-node * create(int data){
+node * create(int value){
 	node *temp = new node;
-	temp->data = data;
+	temp->value = value;
 	temp->left = nullptr;
 	temp->right = nullptr;
 	return temp;
@@ -22,7 +22,7 @@ void preorder(node *root){
 		return;
 	}
 
-	cout << root->data << " ";
+	cout << root->value << " ";
 	preorder(root->left);
 	preorder(root->right);
 }
